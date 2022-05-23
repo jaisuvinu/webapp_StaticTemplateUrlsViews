@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+</head>
+<body bgcolor="lightgray" text ="black">
+<header>
+    <p align ="center">
+        <a href="{% url 'homel'%}">home</a> |
+        <a href="#">about</a> |
+        <a href="{% url 'contactl'%}">contact</a>
+    </p>
+
+</header>
+<hr>
+<h1>Welcome to the webapp Application</h1>
+<h2>Owner address is : {{place}}</h2>
+<h3>And the Experience is : {{experience}}<br>
+    {% if experience > 5%}
+    {{'He is Master in training'}}
+    {%else%}
+    {{'He is a Fresher'}}
+    {%endif%}
+</h3>
+<img src = "{% static '/flower.jpg' %}"alt ="RRR" height = "200px" width ="200px">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<footer></footer>
+</body>
+</html>

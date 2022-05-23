@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+        border:2px solid blue;
+        height:200px;
+        width:400px
+        }
+    </style>
+</head>
+<body bgcolor="lightgrey" text ="black">
+<header>
+    <p align ="center">
+        <a href="{% url 'homel'%}">home</a> |
+        <a href="{% url 'aboutl'%}">about</a> |
+        <a href="#">contact</a>
+    </p>
+
+</header>
+<hr>
+<h1>Address: 13604 194th pl ,seattle ,USA .</h1>
+<h2>Owner contact is : {{phone}}</h2>
+<form name = "regForm" action ="{% url 'contactprocess' %}" method ="get">
+   <table align ="center" cellspacing = "5px" cellpadding="5px">
+        <tr>
+        <td><label for = "id1">Name</label></td>
+        <td><input type = "text" id = "id1" name = "studentName" ></td>
+
+    </tr>
+     <tr>
+         <td><label for = "id2">MailID</label></td>
+        <td><input type = "text" id = "id2" name = "studentEmail" ></td>
+
+    </tr>
+     <tr>
+        <td></td>
+        <td><input type = "submit" value = "Get Notification"></td>
+
+    </tr>
+   </table>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<footer></footer>
+</body>
+</html>

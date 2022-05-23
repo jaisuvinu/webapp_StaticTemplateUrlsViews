@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="lightgrey" text ="black">
+<header>
+    <p align ="center">
+        <a href="#">home</a> |
+        <a href="{% url 'aboutl'%}">about</a> |
+        <a href="{% url 'contactl'%}">contact</a>
+    </p>
+
+</header>
+<hr>
+<h1>Welcome to the webapp Application</h1>
+<h2>Owner name is : {{name}}</h2>
+<h3>{{name}} teaches all the following subjects :<br>
+
+    <ul>
+        {%for subject in subjects%}
+        <li>{{subject}}</li>
+        {%endfor%}
+    </ul>
+</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<footer></footer>
+</body>
+</html>
